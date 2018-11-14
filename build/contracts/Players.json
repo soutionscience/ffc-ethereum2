@@ -1,0 +1,174 @@
+{
+  "contractName": "Players",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582036beed23f98658b28c0d7cb243f9f0e4b0f2a075254db35f4afbb6f4c8f67e9b0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582036beed23f98658b28c0d7cb243f9f0e4b0f2a075254db35f4afbb6f4c8f67e9b0029",
+  "sourceMap": "27:42:5:-;;;48:19;8:9:-1;5:2;;;30:1;27;20:12;5:2;48:19:5;27:42;;;;;;",
+  "deployedSourceMap": "27:42:5:-;;;;;",
+  "source": "pragma solidity ^0.4.22;\n\n\ncontract Players {\n  constructor() {\n  }\n}\n",
+  "sourcePath": "C:\\Users\\Solution Science\\Google Drive\\work2\\projects\\ffc-ethereum\\contracts\\Players.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Players.sol",
+    "exportedSymbols": {
+      "Players": [
+        423
+      ]
+    },
+    "id": 424,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 418,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 423,
+        "linearizedBaseContracts": [
+          423
+        ],
+        "name": "Players",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 421,
+              "nodeType": "Block",
+              "src": "62:5:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 422,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 419,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "59:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 420,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "62:0:5"
+            },
+            "scope": 423,
+            "src": "48:19:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 424,
+        "src": "27:42:5"
+      }
+    ],
+    "src": "0:70:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Players.sol",
+    "exportedSymbols": {
+      "Players": [
+        423
+      ]
+    },
+    "id": 424,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 418,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 423,
+        "linearizedBaseContracts": [
+          423
+        ],
+        "name": "Players",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 421,
+              "nodeType": "Block",
+              "src": "62:5:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 422,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 419,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "59:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 420,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "62:0:5"
+            },
+            "scope": 423,
+            "src": "48:19:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 424,
+        "src": "27:42:5"
+      }
+    ],
+    "src": "0:70:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-14T08:29:22.812Z"
+}

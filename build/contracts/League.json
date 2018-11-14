@@ -1,0 +1,3116 @@
+{
+  "contractName": "League",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "competitions",
+      "outputs": [
+        {
+          "name": "manager",
+          "type": "address"
+        },
+        {
+          "name": "complete",
+          "type": "bool"
+        },
+        {
+          "name": "prizeMoney",
+          "type": "uint256"
+        },
+        {
+          "name": "maxPlayers",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "max",
+          "type": "uint256"
+        }
+      ],
+      "name": "createCompetition",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "joinCompetition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "winner",
+          "type": "address"
+        }
+      ],
+      "name": "awardWinner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160208061060383398101806040528101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610580806100836000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631095846f1461006757806371730b5f14610094578063958bc07d146100e15780639f6828d914610101575b600080fd5b34801561007357600080fd5b5061009260048036038101908080359060200190929190505050610187565b005b3480156100a057600080fd5b506100df60048036038101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610276565b005b6100ff600480360381019080803590602001909291905050506103b2565b005b34801561010d57600080fd5b5061012c600480360381019080803590602001909291905050506104a7565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018415151515815260200183815260200182815260200194505050505060405180910390f35b60018181548110151561019657fe5b906000526020600020906004020160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161515156101fe57600080fd5b6001808281548110151561020e57fe5b906000526020600020906004020160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102d157600080fd5b6001828154811015156102e057fe5b906000526020600020906004020160030160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16151561034757600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166108fc60018481548110151561037057fe5b9060005260206000209060040201600101549081150290604051600060405180830381858888f193505050501580156103ad573d6000803e3d6000fd5b505050565b6103ba610513565b6080604051908101604052803373ffffffffffffffffffffffffffffffffffffffff1681526020016000151581526020013481526020018381525090506001819080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160000160146101000a81548160ff02191690831515021790555060408201518160010155606082015181600201555050505050565b6001818154811015156104b657fe5b90600052602060002090600402016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060000160149054906101000a900460ff16908060010154908060020154905084565b608060405190810160405280600073ffffffffffffffffffffffffffffffffffffffff168152602001600015158152602001600081526020016000815250905600a165627a7a723058200ceec4125c39e320afb61f8d8461c6ddd3b16f917f280a188536136b44fde6240029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631095846f1461006757806371730b5f14610094578063958bc07d146100e15780639f6828d914610101575b600080fd5b34801561007357600080fd5b5061009260048036038101908080359060200190929190505050610187565b005b3480156100a057600080fd5b506100df60048036038101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610276565b005b6100ff600480360381019080803590602001909291905050506103b2565b005b34801561010d57600080fd5b5061012c600480360381019080803590602001909291905050506104a7565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018415151515815260200183815260200182815260200194505050505060405180910390f35b60018181548110151561019657fe5b906000526020600020906004020160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161515156101fe57600080fd5b6001808281548110151561020e57fe5b906000526020600020906004020160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102d157600080fd5b6001828154811015156102e057fe5b906000526020600020906004020160030160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16151561034757600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166108fc60018481548110151561037057fe5b9060005260206000209060040201600101549081150290604051600060405180830381858888f193505050501580156103ad573d6000803e3d6000fd5b505050565b6103ba610513565b6080604051908101604052803373ffffffffffffffffffffffffffffffffffffffff1681526020016000151581526020013481526020018381525090506001819080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160000160146101000a81548160ff02191690831515021790555060408201518160010155606082015181600201555050505050565b6001818154811015156104b657fe5b90600052602060002090600402016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060000160149054906101000a900460ff16908060010154908060020154905084565b608060405190810160405280600073ffffffffffffffffffffffffffffffffffffffff168152602001600015158152602001600081526020016000815250905600a165627a7a723058200ceec4125c39e320afb61f8d8461c6ddd3b16f917f280a188536136b44fde6240029",
+  "sourceMap": "25:1527:1:-;;;440:83;8:9:-1;5:2;;;30:1;27;20:12;5:2;440:83:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;498:7;488;;:17;;;;;;;;;;;;;;;;;;440:83;25:1527;;;;;;",
+  "deployedSourceMap": "25:1527:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;947:259;;8:9:-1;5:2;;;30:1;27;20:12;5:2;947:259:1;;;;;;;;;;;;;;;;;;;;;;;;;;1259:290;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1259:290:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:334;;;;;;;;;;;;;;;;;;;;;;;;;;375:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;375:33:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;947:259;1044:12;1057:5;1044:19;;;;;;;;;;;;;;;;;;;;:30;;:42;1075:10;1044:42;;;;;;;;;;;;;;;;;;;;;;;;;1043:43;1035:52;;;;;;;;1184:4;1140:12;1153:5;1140:19;;;;;;;;;;;;;;;;;;;;:30;;:42;1171:10;1140:42;;;;;;;;;;;;;;;;:48;;;;;;;;;;;;;;;;;;947:259;:::o;1259:290::-;156:7;;;;;;;;;;;142:21;;:10;:21;;;134:30;;;;;;;;1391:12;1404:5;1391:19;;;;;;;;;;;;;;;;;;;;:30;;:38;1422:6;1391:38;;;;;;;;;;;;;;;;;;;;;;;;;1383:47;;;;;;;;1474:6;:15;;:47;1490:12;1503:5;1490:19;;;;;;;;;;;;;;;;;;;;:30;;;1474:47;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1474:47:1;1259:290;;:::o;555:334::-;627:33;;:::i;:::-;663:154;;;;;;;;;699:10;663:154;;;;;;734:5;663:154;;;;;;796:9;663:154;;;;766:3;663:154;;;627:190;;838:12;856:14;838:33;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;838:33:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:334;;:::o;375:33::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;25:1527::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.6;\r\ncontract League{\r\n    //manager\r\n    address manager;\r\n    //restrictor\r\n    modifier restricted(){\r\n        require(msg.sender == manager);\r\n        _;\r\n    }\r\n    struct Competition{\r\n        address manager;\r\n        bool complete;\r\n        uint prizeMoney;\r\n        uint maxPlayers;\r\n        mapping(address=> bool) competitor;\r\n    }\r\n    \r\n    Competition[] public competitions;\r\n    \r\n    //constructor\r\n    constructor(address creator )  public{\r\n        manager = creator;\r\n        \r\n    }\r\n    //create Competition\r\n    function createCompetition(uint max) public payable{\r\n        \r\n        Competition memory newCompetition = Competition({\r\n            manager: msg.sender,\r\n            complete: false,\r\n            maxPlayers: max,\r\n            prizeMoney: msg.value\r\n        });\r\n        \r\n        competitions.push(newCompetition);\r\n        \r\n    }\r\n    \r\n    //join competitions using competion inde\r\n    function joinCompetition(uint index) public{\r\n        //check if joining twice\r\n        require(!competitions[index].competitor[msg.sender]);\r\n        // add msg sender to competition\r\n        competitions[index].competitor[msg.sender]= true;\r\n        \r\n    }\r\n    \r\n    //award winner using winner address\r\n    function awardWinner(uint index, address winner) public restricted{\r\n         //check if address is in competition\r\n        require(competitions[index].competitor[winner]);\r\n        // send winner the cash\r\n        winner.transfer(competitions[index].prizeMoney);\r\n        \r\n        \r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Solution Science\\Google Drive\\work2\\projects\\ffc-ethereum\\contracts\\Leagues.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Leagues.sol",
+    "exportedSymbols": {
+      "League": [
+        154
+      ]
+    },
+    "id": 155,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 36,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 154,
+        "linearizedBaseContracts": [
+          154
+        ],
+        "name": "League",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "manager",
+            "nodeType": "VariableDeclaration",
+            "scope": 154,
+            "src": "62:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 37,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "62:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "123:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 44,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 41,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 169,
+                            "src": "142:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 42,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "142:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 43,
+                          "name": "manager",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38,
+                          "src": "156:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "142:21:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 40,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "134:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "134:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "134:30:1"
+                },
+                {
+                  "id": 47,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "175:1:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "name": "restricted",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:1"
+            },
+            "src": "102:82:1",
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "League.Competition",
+            "id": 62,
+            "members": [
+              {
+                "constant": false,
+                "id": 51,
+                "name": "manager",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "219:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 50,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 53,
+                "name": "complete",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "245:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 55,
+                "name": "prizeMoney",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "269:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 54,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "269:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 57,
+                "name": "maxPlayers",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "295:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 56,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "295:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61,
+                "name": "competitor",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "321:34:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 60,
+                  "keyType": {
+                    "id": 58,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "321:23:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 59,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Competition",
+            "nodeType": "StructDefinition",
+            "scope": 154,
+            "src": "190:173:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 65,
+            "name": "competitions",
+            "nodeType": "VariableDeclaration",
+            "scope": 154,
+            "src": "375:33:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+              "typeString": "struct League.Competition[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 63,
+                "name": "Competition",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 62,
+                "src": "375:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Competition_$62_storage_ptr",
+                  "typeString": "struct League.Competition"
+                }
+              },
+              "id": 64,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "375:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage_ptr",
+                "typeString": "struct League.Competition[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "477:46:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 70,
+                      "name": "manager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "488:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 71,
+                      "name": "creator",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 67,
+                      "src": "498:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "488:17:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "488:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 75,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "name": "creator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "452:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:18:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 69,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "477:0:1"
+            },
+            "scope": 154,
+            "src": "440:83:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 97,
+              "nodeType": "Block",
+              "src": "606:283:1",
+              "statements": [
+                {
+                  "assignments": [
+                    81
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 81,
+                      "name": "newCompetition",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 98,
+                      "src": "627:33:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                        "typeString": "struct League.Competition"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 80,
+                        "name": "Competition",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 62,
+                        "src": "627:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Competition_$62_storage_ptr",
+                          "typeString": "struct League.Competition"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 90,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 83,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "699:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 84,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "699:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "66616c7365",
+                        "id": 85,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "734:5:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "false"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 86,
+                        "name": "max",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "766:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 87,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "796:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "796:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 82,
+                      "name": "Competition",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 62,
+                      "src": "663:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Competition_$62_storage_ptr_$",
+                        "typeString": "type(struct League.Competition storage pointer)"
+                      }
+                    },
+                    "id": 89,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "manager",
+                      "complete",
+                      "maxPlayers",
+                      "prizeMoney"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "663:154:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Competition_$62_memory",
+                      "typeString": "struct League.Competition memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "627:190:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 94,
+                        "name": "newCompetition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 81,
+                        "src": "856:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                          "typeString": "struct League.Competition memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                          "typeString": "struct League.Competition memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 91,
+                        "name": "competitions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 65,
+                        "src": "838:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                          "typeString": "struct League.Competition storage ref[] storage ref"
+                        }
+                      },
+                      "id": 93,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "838:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Competition_$62_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct League.Competition storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 95,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "838:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 96,
+                  "nodeType": "ExpressionStatement",
+                  "src": "838:33:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 98,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createCompetition",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "max",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "582:8:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "582:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "581:10:1"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "606:0:1"
+            },
+            "scope": 154,
+            "src": "555:334:1",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 124,
+              "nodeType": "Block",
+              "src": "990:216:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "1043:43:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 104,
+                                "name": "competitions",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 65,
+                                "src": "1044:12:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                                  "typeString": "struct League.Competition storage ref[] storage ref"
+                                }
+                              },
+                              "id": 106,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 105,
+                                "name": "index",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 100,
+                                "src": "1057:5:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1044:19:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Competition_$62_storage",
+                                "typeString": "struct League.Competition storage ref"
+                              }
+                            },
+                            "id": 107,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "competitor",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 61,
+                            "src": "1044:30:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                              "typeString": "mapping(address => bool)"
+                            }
+                          },
+                          "id": 110,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 108,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 169,
+                              "src": "1075:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 109,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1075:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1044:42:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 103,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "1035:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 112,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1035:52:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 113,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1035:52:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 114,
+                            "name": "competitions",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "1140:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                              "typeString": "struct League.Competition storage ref[] storage ref"
+                            }
+                          },
+                          "id": 116,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 115,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 100,
+                            "src": "1153:5:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1140:19:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Competition_$62_storage",
+                            "typeString": "struct League.Competition storage ref"
+                          }
+                        },
+                        "id": 117,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "competitor",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 61,
+                        "src": "1140:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 120,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 118,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "1171:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 119,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1171:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1140:42:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1184:4:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1140:48:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1140:48:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 125,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "joinCompetition",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "972:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "971:12:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "990:0:1"
+            },
+            "scope": 154,
+            "src": "947:259:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 152,
+              "nodeType": "Block",
+              "src": "1325:224:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 135,
+                              "name": "competitions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 65,
+                              "src": "1391:12:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                                "typeString": "struct League.Competition storage ref[] storage ref"
+                              }
+                            },
+                            "id": 137,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 136,
+                              "name": "index",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 127,
+                              "src": "1404:5:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "1391:19:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Competition_$62_storage",
+                              "typeString": "struct League.Competition storage ref"
+                            }
+                          },
+                          "id": 138,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "competitor",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 61,
+                          "src": "1391:30:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 140,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 139,
+                          "name": "winner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 129,
+                          "src": "1422:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1391:38:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 134,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "1383:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 141,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1383:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 142,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1383:47:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 146,
+                            "name": "competitions",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "1490:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                              "typeString": "struct League.Competition storage ref[] storage ref"
+                            }
+                          },
+                          "id": 148,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 147,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 127,
+                            "src": "1503:5:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1490:19:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Competition_$62_storage",
+                            "typeString": "struct League.Competition storage ref"
+                          }
+                        },
+                        "id": 149,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "prizeMoney",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 55,
+                        "src": "1490:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 143,
+                        "name": "winner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "1474:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1474:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1474:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1474:47:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 153,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 132,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 131,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 49,
+                  "src": "1315:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1315:10:1"
+              }
+            ],
+            "name": "awardWinner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 130,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 127,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1280:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 126,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1280:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1292:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1292:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1279:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1325:0:1"
+            },
+            "scope": 154,
+            "src": "1259:290:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 155,
+        "src": "25:1527:1"
+      }
+    ],
+    "src": "0:1552:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Leagues.sol",
+    "exportedSymbols": {
+      "League": [
+        154
+      ]
+    },
+    "id": 155,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 36,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 154,
+        "linearizedBaseContracts": [
+          154
+        ],
+        "name": "League",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "manager",
+            "nodeType": "VariableDeclaration",
+            "scope": 154,
+            "src": "62:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 37,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "62:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "123:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 44,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 41,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 169,
+                            "src": "142:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 42,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "142:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 43,
+                          "name": "manager",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38,
+                          "src": "156:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "142:21:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 40,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "134:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "134:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "134:30:1"
+                },
+                {
+                  "id": 47,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "175:1:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "name": "restricted",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:1"
+            },
+            "src": "102:82:1",
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "League.Competition",
+            "id": 62,
+            "members": [
+              {
+                "constant": false,
+                "id": 51,
+                "name": "manager",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "219:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 50,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 53,
+                "name": "complete",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "245:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 55,
+                "name": "prizeMoney",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "269:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 54,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "269:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 57,
+                "name": "maxPlayers",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "295:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 56,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "295:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61,
+                "name": "competitor",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "321:34:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 60,
+                  "keyType": {
+                    "id": 58,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "321:23:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 59,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Competition",
+            "nodeType": "StructDefinition",
+            "scope": 154,
+            "src": "190:173:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 65,
+            "name": "competitions",
+            "nodeType": "VariableDeclaration",
+            "scope": 154,
+            "src": "375:33:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+              "typeString": "struct League.Competition[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 63,
+                "name": "Competition",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 62,
+                "src": "375:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Competition_$62_storage_ptr",
+                  "typeString": "struct League.Competition"
+                }
+              },
+              "id": 64,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "375:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage_ptr",
+                "typeString": "struct League.Competition[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "477:46:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 70,
+                      "name": "manager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "488:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 71,
+                      "name": "creator",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 67,
+                      "src": "498:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "488:17:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "488:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 75,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "name": "creator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "452:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:18:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 69,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "477:0:1"
+            },
+            "scope": 154,
+            "src": "440:83:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 97,
+              "nodeType": "Block",
+              "src": "606:283:1",
+              "statements": [
+                {
+                  "assignments": [
+                    81
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 81,
+                      "name": "newCompetition",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 98,
+                      "src": "627:33:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                        "typeString": "struct League.Competition"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 80,
+                        "name": "Competition",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 62,
+                        "src": "627:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Competition_$62_storage_ptr",
+                          "typeString": "struct League.Competition"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 90,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 83,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "699:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 84,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "699:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "66616c7365",
+                        "id": 85,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "734:5:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "false"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 86,
+                        "name": "max",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "766:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 87,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "796:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "796:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 82,
+                      "name": "Competition",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 62,
+                      "src": "663:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Competition_$62_storage_ptr_$",
+                        "typeString": "type(struct League.Competition storage pointer)"
+                      }
+                    },
+                    "id": 89,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "manager",
+                      "complete",
+                      "maxPlayers",
+                      "prizeMoney"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "663:154:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Competition_$62_memory",
+                      "typeString": "struct League.Competition memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "627:190:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 94,
+                        "name": "newCompetition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 81,
+                        "src": "856:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                          "typeString": "struct League.Competition memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Competition_$62_memory_ptr",
+                          "typeString": "struct League.Competition memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 91,
+                        "name": "competitions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 65,
+                        "src": "838:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                          "typeString": "struct League.Competition storage ref[] storage ref"
+                        }
+                      },
+                      "id": 93,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "838:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Competition_$62_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct League.Competition storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 95,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "838:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 96,
+                  "nodeType": "ExpressionStatement",
+                  "src": "838:33:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 98,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createCompetition",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "max",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "582:8:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "582:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "581:10:1"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "606:0:1"
+            },
+            "scope": 154,
+            "src": "555:334:1",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 124,
+              "nodeType": "Block",
+              "src": "990:216:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "1043:43:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 104,
+                                "name": "competitions",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 65,
+                                "src": "1044:12:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                                  "typeString": "struct League.Competition storage ref[] storage ref"
+                                }
+                              },
+                              "id": 106,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 105,
+                                "name": "index",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 100,
+                                "src": "1057:5:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1044:19:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Competition_$62_storage",
+                                "typeString": "struct League.Competition storage ref"
+                              }
+                            },
+                            "id": 107,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "competitor",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 61,
+                            "src": "1044:30:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                              "typeString": "mapping(address => bool)"
+                            }
+                          },
+                          "id": 110,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 108,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 169,
+                              "src": "1075:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 109,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1075:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1044:42:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 103,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "1035:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 112,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1035:52:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 113,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1035:52:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 114,
+                            "name": "competitions",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "1140:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                              "typeString": "struct League.Competition storage ref[] storage ref"
+                            }
+                          },
+                          "id": 116,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 115,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 100,
+                            "src": "1153:5:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1140:19:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Competition_$62_storage",
+                            "typeString": "struct League.Competition storage ref"
+                          }
+                        },
+                        "id": 117,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "competitor",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 61,
+                        "src": "1140:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 120,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 118,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "1171:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 119,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1171:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1140:42:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1184:4:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1140:48:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1140:48:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 125,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "joinCompetition",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "972:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "971:12:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "990:0:1"
+            },
+            "scope": 154,
+            "src": "947:259:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 152,
+              "nodeType": "Block",
+              "src": "1325:224:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 135,
+                              "name": "competitions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 65,
+                              "src": "1391:12:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                                "typeString": "struct League.Competition storage ref[] storage ref"
+                              }
+                            },
+                            "id": 137,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 136,
+                              "name": "index",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 127,
+                              "src": "1404:5:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "1391:19:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Competition_$62_storage",
+                              "typeString": "struct League.Competition storage ref"
+                            }
+                          },
+                          "id": 138,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "competitor",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 61,
+                          "src": "1391:30:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 140,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 139,
+                          "name": "winner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 129,
+                          "src": "1422:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1391:38:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 134,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        172,
+                        173
+                      ],
+                      "referencedDeclaration": 172,
+                      "src": "1383:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 141,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1383:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 142,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1383:47:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 146,
+                            "name": "competitions",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "1490:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Competition_$62_storage_$dyn_storage",
+                              "typeString": "struct League.Competition storage ref[] storage ref"
+                            }
+                          },
+                          "id": 148,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 147,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 127,
+                            "src": "1503:5:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1490:19:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Competition_$62_storage",
+                            "typeString": "struct League.Competition storage ref"
+                          }
+                        },
+                        "id": 149,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "prizeMoney",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 55,
+                        "src": "1490:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 143,
+                        "name": "winner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "1474:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1474:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1474:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1474:47:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 153,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 132,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 131,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 49,
+                  "src": "1315:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1315:10:1"
+              }
+            ],
+            "name": "awardWinner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 130,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 127,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1280:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 126,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1280:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1292:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1292:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1279:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1325:0:1"
+            },
+            "scope": 154,
+            "src": "1259:290:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 155,
+        "src": "25:1527:1"
+      }
+    ],
+    "src": "0:1552:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-14T09:45:35.531Z"
+}

@@ -1,0 +1,959 @@
+{
+  "contractName": "leagueFactory",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "joinCompetition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "deployedLeagues",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "winner",
+          "type": "address"
+        }
+      ],
+      "name": "awardWinner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "max",
+          "type": "uint256"
+        }
+      ],
+      "name": "createCompetition",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "competitions",
+      "outputs": [
+        {
+          "name": "manager",
+          "type": "address"
+        },
+        {
+          "name": "complete",
+          "type": "bool"
+        },
+        {
+          "name": "prizeMoney",
+          "type": "uint256"
+        },
+        {
+          "name": "maxPlayers",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deployLeague",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "GetAllLeagues",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.6;\r\n//factory to create multiple leagues\r\nimport \"./Leagues.sol\";\r\n\r\ncontract leagueFactory is League{\r\n    address[] public deployedLeagues;\r\n    \r\n    function deployLeague() public{\r\n        var newLeague = new League(msg.sender);\r\n        deployedLeagues.push(newLeague);\r\n        \r\n    }\r\n    function GetAllLeagues() public view returns (address[]){\r\n        return deployedLeagues;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Solution Science\\Google Drive\\work2\\projects\\ffc-ethereum\\contracts\\LeagueFactory.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/LeagueFactory.sol",
+    "exportedSymbols": {
+      "leagueFactory": [
+        34
+      ]
+    },
+    "id": 35,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Leagues.sol",
+        "file": "./Leagues.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 35,
+        "sourceUnit": 155,
+        "src": "63:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "League",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 154,
+              "src": "116:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_League_$154",
+                "typeString": "contract League"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "116:6:0"
+          }
+        ],
+        "contractDependencies": [
+          154
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 34,
+        "linearizedBaseContracts": [
+          34,
+          154
+        ],
+        "name": "leagueFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7,
+            "name": "deployedLeagues",
+            "nodeType": "VariableDeclaration",
+            "scope": 34,
+            "src": "129:32:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 5,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "129:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 6,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "129:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 23,
+              "nodeType": "Block",
+              "src": "204:109:0",
+              "statements": [
+                {
+                  "assignments": [
+                    10
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10,
+                      "name": "newLeague",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 24,
+                      "src": "215:13:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_League_$154",
+                        "typeString": "contract League"
+                      },
+                      "typeName": null,
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 16,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 13,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "242:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 14,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "242:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 12,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "231:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_League_$154_$",
+                        "typeString": "function (address) returns (contract League)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 11,
+                        "name": "League",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 154,
+                        "src": "235:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "231:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_League_$154",
+                      "typeString": "contract League"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "215:38:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "newLeague",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "285:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 17,
+                        "name": "deployedLeagues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "264:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "264:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "264:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "264:31:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 24,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deployLeague",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "195:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "204:0:0"
+            },
+            "scope": 34,
+            "src": "174:139:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 32,
+              "nodeType": "Block",
+              "src": "375:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "name": "deployedLeagues",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7,
+                    "src": "393:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 29,
+                  "id": 31,
+                  "nodeType": "Return",
+                  "src": "386:22:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetAllLeagues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33,
+                  "src": "365:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "365:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 27,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "365:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "364:11:0"
+            },
+            "scope": 34,
+            "src": "319:97:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 35,
+        "src": "90:329:0"
+      }
+    ],
+    "src": "0:419:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/LeagueFactory.sol",
+    "exportedSymbols": {
+      "leagueFactory": [
+        34
+      ]
+    },
+    "id": 35,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/C/Users/Solution Science/Google Drive/work2/projects/ffc-ethereum/contracts/Leagues.sol",
+        "file": "./Leagues.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 35,
+        "sourceUnit": 155,
+        "src": "63:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "League",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 154,
+              "src": "116:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_League_$154",
+                "typeString": "contract League"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "116:6:0"
+          }
+        ],
+        "contractDependencies": [
+          154
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 34,
+        "linearizedBaseContracts": [
+          34,
+          154
+        ],
+        "name": "leagueFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7,
+            "name": "deployedLeagues",
+            "nodeType": "VariableDeclaration",
+            "scope": 34,
+            "src": "129:32:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 5,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "129:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 6,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "129:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 23,
+              "nodeType": "Block",
+              "src": "204:109:0",
+              "statements": [
+                {
+                  "assignments": [
+                    10
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10,
+                      "name": "newLeague",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 24,
+                      "src": "215:13:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_League_$154",
+                        "typeString": "contract League"
+                      },
+                      "typeName": null,
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 16,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 13,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 169,
+                          "src": "242:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 14,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "242:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 12,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "231:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_League_$154_$",
+                        "typeString": "function (address) returns (contract League)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 11,
+                        "name": "League",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 154,
+                        "src": "235:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "231:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_League_$154",
+                      "typeString": "contract League"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "215:38:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "newLeague",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "285:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_League_$154",
+                          "typeString": "contract League"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 17,
+                        "name": "deployedLeagues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "264:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "264:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "264:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "264:31:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 24,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deployLeague",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "195:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "204:0:0"
+            },
+            "scope": 34,
+            "src": "174:139:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 32,
+              "nodeType": "Block",
+              "src": "375:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "name": "deployedLeagues",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7,
+                    "src": "393:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 29,
+                  "id": 31,
+                  "nodeType": "Return",
+                  "src": "386:22:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetAllLeagues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33,
+                  "src": "365:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "365:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 27,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "365:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "364:11:0"
+            },
+            "scope": 34,
+            "src": "319:97:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 35,
+        "src": "90:329:0"
+      }
+    ],
+    "src": "0:419:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-14T09:45:35.529Z"
+}
